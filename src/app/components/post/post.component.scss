@@ -5,6 +5,7 @@ ion-row{
     margin-bottom: -5px;
 }
 ion-card-content{
+    margin-top: -10px;
     padding: 0px;
 }
 ion-toolbar{
@@ -12,4 +13,11 @@ ion-toolbar{
 }
 ion-card-header{
     padding: 5px;
+}
+.header-pic{
+    font-size: 50px;
+    margin-right: 5px;
+}
+.header-btn{
+    margin-left: -15px;
 }
