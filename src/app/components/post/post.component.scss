@@ -12,12 +12,23 @@ ion-toolbar{
     margin-top: 5px;
 }
 ion-card-header{
-    padding: 5px;
+    padding: 0px;
 }
 .header-pic{
-    font-size: 50px;
+    font-size: 40px;
     margin-right: 5px;
 }
 .header-btn{
-    margin-left: -15px;
+    margin: 7px 7px 7px -12px;
+    padding: 0px;
+    --ripple-color: transparent;
+
 }
+ion-card{
+    --background: none !important;
+    margin: 0px;
+}
+.ripple-parent {
+    position: relative;
+    overflow: hidden;
+  }
