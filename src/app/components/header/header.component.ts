@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
 
 @Component({
@@ -7,6 +7,8 @@ import { PopoverController } from '@ionic/angular';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+
+  @Input() title: string = 'MyGram';
 
   constructor(public popCtrl: PopoverController) { }
 
