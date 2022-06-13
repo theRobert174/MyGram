@@ -1,3 +1,15 @@
-ion-toolbar{
+ion-item, ion-toolbar{
     --background: none !important;
+}
+ion-row{
+    margin-bottom: -5px;
+}
+ion-card-content{
+    padding: 0px;
+}
+ion-toolbar{
+    margin-top: 5px;
+}
+ion-card-header{
+    padding: 5px;
 }
