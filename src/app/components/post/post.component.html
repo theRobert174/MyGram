@@ -1,0 +1,52 @@
+<ion-card>
+  <ion-card-header>
+    <ion-buttons>
+      <ion-button color="dark"><ion-icon slot="start" size="larger" src="../../assets/icon/account_circle.svg" size="large"></ion-icon>Persona</ion-button>
+    </ion-buttons>
+  </ion-card-header>
+
+  <ion-img  src="../../assets/loading-image.png" (click)="true"></ion-img>
+
+  <ion-card-content>
+
+    <ion-toolbar class="toolbar-trans" translucent class="ion-no-margin">
+        <ion-buttons slot="start">
+            <ion-button color="danger" (click)="true"><ion-icon name="heart-outline" slot="icon-only"></ion-icon></ion-button>
+        </ion-buttons>
+        <ion-buttons slot="start">
+            <ion-button color="warning" (click)="true"><ion-icon name="chatbubble-outline" slot="icon-only"></ion-icon></ion-button>
+        </ion-buttons>
+        <ion-buttons slot="start">
+            <ion-button color="primary" (click)="true"><ion-icon name="paper-plane-outline" slot="icon-only"></ion-icon></ion-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-button color="tertiary" (click)="true"><ion-icon name="bookmark-outline" slot="icon-only"></ion-icon></ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+
+    <ion-grid class="ion-no-margin">
+      <ion-label>15,000 Me gusta</ion-label>
+      <ion-row style="height: 5px"></ion-row>
+      <ion-label color="dark" class="ion-text-warp" style="font-weight: bold;">Persona</ion-label> Caption
+      <ion-row style="height: 5px"></ion-row>
+      <ion-label>Ver los 15,000 comentarios</ion-label>
+
+      <ion-row style="padding-bottom: 0; margin-bottom: 0;">
+          <ion-col class="columns-pad" size="0" style="margin-right: 15px;">
+              <ion-avatar>
+                  <ion-img *ngIf="false else picFail" [src]="" style="width: 20px; height: 20px;"></ion-img>
+                  <ng-template #picFail>
+                  <img  src="../../assets/icon/account_circle.svg" style="width: 20px; height: 20px;">
+                  </ng-template> 
+              </ion-avatar>
+          </ion-col>
+          <ion-col>
+              <ion-label>Añade un comentario</ion-label>
+          </ion-col>
+      </ion-row>
+
+      <ion-label style="font-size: 12px; padding-top: 0; margin-top: 0;">Hace X horas</ion-label>
+    </ion-grid>
+  </ion-card-content>
+
+</ion-card>

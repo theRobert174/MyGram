@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-label slot="start" style="margin-left: 20px; font-weight: bold; font-size:larger;" >
+      MyGram
+    </ion-label>
+    <ion-buttons slot="end">
+      <ion-button (click)="notifications()" color="primary">
+        <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+      </ion-button>
+      <!-- Notificaciones -->
+      <ion-button id="notification" color="danger">
+        <ion-icon slot="icon-only" name="heart-outline"></ion-icon>
+      </ion-button>
+      <ion-popover trigger="notification">
+        <ng-template>
+          <ion-item lines="none">
+            <ion-label>Notificaciones ...</ion-label>
+          </ion-item>
+        </ng-template>
+      </ion-popover>
+      <!-- CerrarSesion -->
+      <ion-button id="logout" color="danger">
+        <ion-avatar *ngIf="false; else photo"  style="width: 30px; height:30px;">
+          <ion-img src="https://happytravel.viajes/wp-content/uploads/2020/04/146-1468479_my-profile-icon-blank-profile-picture-circle-hd.png"></ion-img>
+        </ion-avatar>
+        <ng-template #photo><ion-icon slot="icon-only" name="person-circle-outline"></ion-icon></ng-template>
+      </ion-button>
+      <ion-popover trigger="logout">
+        <ng-template>
+          <ion-button expand="block" color="danger">Log Out</ion-button>
+        </ng-template>
+      </ion-popover>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
