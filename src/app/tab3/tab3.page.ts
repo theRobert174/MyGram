@@ -9,4 +9,9 @@ export class Tab3Page {
 
   constructor() {}
 
+  onClick(){
+    console.log("icono presionado");
+    
+  }
+
 }

@@ -1,36 +1,45 @@
 ion-avatar, .av-icon{
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     display: block;
+    margin: none;
+    padding: none;
 }
 .container{
     position: relative;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
+    padding: none;
+    margin: none;
 }
 .little-icon{
     position: absolute;
-    bottom: 5px;
-    right: 5px;
-    background-color: var(--ion-color-primary);
-    border-radius: 100%;
+    --border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: none;
+    margin: none;
+    font-size: 1px !important;
+    border-color: var(--ion-color-shift);
+    border-width: 4px;
     border-style: solid;
-    border-color: var(--ion-color-light);
-    border-width: 5px;
-    color: white;
-    z-index: 1;
+    border-radius: 100%;
+    bottom: 2px;
+    right: 2px;
 }
 .info{
     margin-right: 10px;
 }
-// .little-icon::after{
-//     position: absolute;
-//     bottom: 0px;
-//     right: 0px;
-//     background-color: var(--ion-color-dark);
-//     border-radius: 100%;
-//     content: '';
-//     width: 35px;
-//     height: 35px;
-//     z-index: 2;
+// *{
+//     box-sizing: border-box;
+//     outline: 3px solid limegreen !important;
 // }
+
+ion-content {
+    --offset-bottom: auto!important;
+    --overflow: hidden;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
