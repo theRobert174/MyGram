@@ -11,4 +11,26 @@ export class PostComponent implements OnInit {
 
   ngOnInit() {}
 
+toggleBtn(ionicButton){
+  if(ionicButton.color !== 'dark'){
+    ionicButton.color='dark';
+  }
+  else{
+    switch(ionicButton.el.id){
+      case 'heart':
+          ionicButton.color = 'danger'
+        break;
+      case 'comment':
+        ionicButton.color='warning';
+        break;
+      case 'share':
+        ionicButton.color='primary';
+        break;
+      case 'save':
+        ionicButton.color='tertiary';
+        break;
+    }
+  }
+}
+
 }

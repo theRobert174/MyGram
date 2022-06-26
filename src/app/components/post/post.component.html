@@ -7,16 +7,16 @@
 
   <ion-toolbar class="toolbar-trans" translucent class="ion-no-margin">
       <ion-buttons slot="start">
-          <ion-button color="danger"><ion-icon name="heart-outline" slot="icon-only"></ion-icon></ion-button>
+          <ion-button #heart id="heart" (click)="toggleBtn(heart)" color="dark" ><ion-icon name="heart-outline" slot="icon-only"></ion-icon></ion-button>
       </ion-buttons>
       <ion-buttons slot="start">
-          <ion-button color="warning" (click)="true"><ion-icon name="chatbubble-outline" slot="icon-only"></ion-icon></ion-button>
+          <ion-button #comment id="comment" (click)="toggleBtn(comment)" color="dark" (click)="true"><ion-icon name="chatbubble-outline" slot="icon-only"></ion-icon></ion-button>
       </ion-buttons>
       <ion-buttons slot="start">
-          <ion-button color="primary" (click)="true"><ion-icon name="paper-plane-outline" slot="icon-only"></ion-icon></ion-button>
+          <ion-button #share id="share" (click)="toggleBtn(share)" color="dark" (click)="true"><ion-icon name="paper-plane-outline" slot="icon-only"></ion-icon></ion-button>
       </ion-buttons>
       <ion-buttons slot="end">
-          <ion-button color="tertiary" (click)="true"><ion-icon name="bookmark-outline" slot="icon-only"></ion-icon></ion-button>
+          <ion-button #save id="save" (click)="toggleBtn(save)" color="dark" (click)="true"><ion-icon name="bookmark-outline" slot="icon-only"></ion-icon></ion-button>
       </ion-buttons>
       
   </ion-toolbar>
