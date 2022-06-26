@@ -3,17 +3,20 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { HeaderComponent } from './header/header.component';
 import { PostComponent } from './post/post.component';
+import { GridProfileComponent } from './grid-profile/grid-profile.component';
 
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    PostComponent
+    PostComponent,
+    GridProfileComponent
   ],
   exports: [
     HeaderComponent,
-    PostComponent
+    PostComponent,
+    GridProfileComponent
   ],
   imports: [
     CommonModule,

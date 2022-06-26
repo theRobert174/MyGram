@@ -58,7 +58,7 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <ion-segment value="posts" (ionChange)="onClick()" mode="md">
+  <ion-segment value="posts" (ionChange)="segmentChanged($event)" mode="md">
     <ion-segment-button value="posts">
       <ion-icon name="apps-outline"></ion-icon>
     </ion-segment-button>
@@ -66,4 +66,6 @@
       <ion-icon name="book-outline"></ion-icon>
     </ion-segment-button>
   </ion-segment>
+
+  <app-grid-profile *ngIf="segment === 'posts'"></app-grid-profile>
 </ion-content>

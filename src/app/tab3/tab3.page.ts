@@ -7,11 +7,17 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
+  segment: string = 'posts';
+
   constructor() {}
 
   onClick(){
     console.log("icono presionado");
     
+  }
+
+  segmentChanged(event){
+    this.segment = event.detail.value;
   }
 
 }
