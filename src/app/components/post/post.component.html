@@ -1,6 +1,15 @@
 <ion-card>
   <ion-card-header>
-      <ion-button color="dark" fill="clear" class="header-btn" strong><ion-icon class="header-pic" src="../../assets/icon/account_circle.svg"> </ion-icon>Persona</ion-button>
+    <ion-grid class="toolgrid">
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-button color="dark" fill="clear" class="header-btn" strong><ion-icon class="header-pic" src="../../assets/icon/account_circle.svg"> </ion-icon>Persona</ion-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+          <ion-button fill="clear" slot="end"><ion-icon name="ellipsis-horizontal"></ion-icon></ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-grid>
   </ion-card-header>
 
   <ion-img  src="../../assets/loading-image.png" (click)="true"></ion-img>
