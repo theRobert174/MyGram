@@ -1,0 +1,40 @@
+ion-item, ion-toolbar{
+    --background: none !important;
+}
+ion-row{
+    margin-bottom: -5px;
+}
+ion-card-content{
+    margin-top: -10px;
+    padding: 0px;
+}
+ion-toolbar{
+    margin-top: 5px;
+}
+ion-card-header{
+    padding: 0px;
+}
+.header-pic{
+    font-size: 40px;
+    margin-right: 5px;
+}
+.header-btn{
+    margin: 7px 7px 7px -12px;
+    padding: 0px;
+    --ripple-color: transparent;
+
+}
+ion-card{
+    --background: none !important;
+    margin: 0px;
+}
+.ripple-parent {
+    position: relative;
+    overflow: hidden;
+}
+.toolgrid{
+    padding-left: 10px;
+}
+ion-header{
+    padding-left: 5px;
+}

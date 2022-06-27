@@ -1,17 +1,22 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-post',
-  templateUrl: './post.component.html',
-  styleUrls: ['./post.component.scss'],
+  selector: 'app-post-page',
+  templateUrl: './post-page.page.html',
+  styleUrls: ['./post-page.page.scss'],
 })
-export class PostComponent implements OnInit {
+export class PostPagePage implements OnInit {
 
-  @Output()signal = new EventEmitter<string>();
+  paramID:string = '';
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.paramID = this.route.snapshot.paramMap.get("id");
+    console.log(this.paramID);
+    
+  }
 
   toggleBtn(ionicButton){
     if(ionicButton.color !== 'dark'){
@@ -33,10 +38,6 @@ export class PostComponent implements OnInit {
           break;
       }
     }
-  }
-
-  sendID(){
-    this.signal.emit('123456789');
   }
 
 }

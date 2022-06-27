@@ -5,7 +5,11 @@ import { Tab1Page } from './tab1.page';
 const routes: Routes = [
   {
     path: '',
-    component: Tab1Page,
+    component: Tab1Page
+  },
+  {
+    path: 'post/:id',
+    loadChildren: () => import('../pages/post-page/post-page.module').then(m => m.PostPagePageModule)
   }
 ];
 

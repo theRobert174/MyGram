@@ -1,7 +1,7 @@
 <app-header></app-header>
 
 <ion-content>
-  <app-post *ngFor="let i of [1,1,1,1,1,1,1,1,1]"></app-post>
+  <app-post *ngFor="let i of [1,1,1,1,1,1,1,1,1]" (signal)="openPost($event)"></app-post>
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button>
       <ion-icon name="add"></ion-icon>
