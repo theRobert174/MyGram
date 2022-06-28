@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="MyGram" text="" color="dark"></ion-back-button>
@@ -12,4 +12,14 @@
 
 <ion-content>
   <app-post></app-post>
+
+  <ion-button (click)="post()" expand="block" fill="clear" shape="round">
+    post
+  </ion-button>
+  <ion-button (click)="getter()" expand="block" fill="clear" shape="round">
+    getter
+  </ion-button>
+  <ion-button (click)="newUser()" expand="block" fill="clear" shape="round">
+    newUser
+  </ion-button>
 </ion-content>

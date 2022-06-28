@@ -1,21 +1,25 @@
+
 export interface MyGram {
-    feed:  Feed[];
-    users: User[];
+    Comments: { 
+        [key: string]: { 
+            [key: string]: Comment 
+        } 
+    };
+    Feed:     { 
+        [key: string]: boolean 
+    };
+    Posts:    { 
+        [key: string]: Post 
+    };
+    Users:    { 
+        [key: string]: User 
+    };
 }
 
-export interface Feed {
-    id: string;
-}
-
-export interface User {
-    bio:       string;
-    followers: string;
-    following: string;
-    post:      Post[];
-    posts:     string;
-    uPic:      string;
+export interface Comment {
+    Comment:   string;
+    idComment: string;
     uid:       string;
-    userName:  string;
 }
 
 export interface Post {
@@ -27,3 +31,14 @@ export interface Post {
     time:    string;
     uid:     string;
 }
+
+export interface User {
+    bio:       string;
+    followers: string;
+    following: string;
+    posts:     string;
+    uPic:      string;
+    uid:       string;
+    userName:  string;
+}
+

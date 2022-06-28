@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "mygram-394fc": {
+      "hosting": {
+        "app": [
+          "mygram-394fc"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "mygram-394fc"
+  }
+}
