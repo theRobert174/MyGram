@@ -1,0 +1,10 @@
+<app-header [photo]="userPhoto"></app-header>
+
+<ion-content>
+  <app-post *ngFor="let i of [1,1,1,1,1,1,1,1,1,1]" [photo]="userPhoto" (signal)="openPost($event)"></app-post>
+</ion-content>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button>
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

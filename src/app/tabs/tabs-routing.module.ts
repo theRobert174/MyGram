@@ -8,8 +8,9 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'Feed',
-        loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+        path: 'feed',
+        //loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule),
+        loadChildren: () => import('../pages/feed-page/feed-page.module').then(m => m.FeedPagePageModule),
       },
       {
         path: 'tab2',
@@ -17,18 +18,22 @@ const routes: Routes = [
       },
       {
         path: 'Profile',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+        loadChildren: () => import('../pages/profile-page/profile-page.module').then(m => m.ProfilePagePageModule)
+      },
+      {
+        path: 'post/:id',
+        loadChildren: () => import('../pages/post-page/post-page.module').then(m => m.PostPagePageModule)
       },
       {
         path: '',
-        redirectTo: '/MyGram/Feed',
+        redirectTo: '/feed',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/MyGram/Feed',
+    redirectTo: 'MyGram/feed',
     pathMatch: 'full'
   }
 ];

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DatabaseService } from '../../services/database.service';
 import { Post, User } from '../../interfaces/index';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-post-page',
@@ -12,11 +13,11 @@ export class PostPagePage implements OnInit {
 
   paramID:string = '';
 
-  constructor(private route: ActivatedRoute, private serDB: DatabaseService) { }
+  constructor(private route: ActivatedRoute, private serDB: DatabaseService, private auth: AuthService) { }
 
   ngOnInit() {
     this.paramID = this.route.snapshot.paramMap.get("id");
-    console.log(this.paramID);
+    //console.log(this.paramID);
     
     this.serDB.getFeedDB().then(resp => {console.log(resp.val())});
     this.serDB.getUserDB("dfgh").then(resp => {console.log(resp.val())});
@@ -58,12 +59,17 @@ export class PostPagePage implements OnInit {
     this.serDB.savePostDB(post.uid,post);
   }
 
+  update(){
+    //this.serDB.updatePostFs();
+    console.log(this.auth.userLoggedData());
+  }
+
   getter(){
     this.serDB.getFeedDB().then(resp => {console.log(resp.val())});
   }
 
   newUser(){
-    const user: User ={
+    const user: User = {
       bio: 'LOREM IPSUM',
       followers: '123',
       following: '12',

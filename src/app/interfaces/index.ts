@@ -42,3 +42,15 @@ export interface User {
     userName:  string;
 }
 
+export interface AuthUID {
+    uid:            string;
+    email:          string;
+    displayName:    string;
+    photoURL:       string;
+    emailVerified: boolean;
+}
+
+export interface LogData {
+    email:      string,
+    password:   string
+}

@@ -20,12 +20,15 @@
       <!-- CerrarSesion -->
       <ion-button id="logout" color="danger">
         <ion-avatar>
-          <ion-icon name="person-circle-outline"></ion-icon>
+          <ion-icon *ngIf="!photo; else isPhoto" name="person-circle-outline"></ion-icon>
+          <ng-template #isPhoto>
+            <img [src]="photo" alt="LoggedUser">
+          </ng-template>
         </ion-avatar>
       </ion-button>
-      <ion-popover trigger="logout">
+      <ion-popover trigger="logout" #pop>
         <ng-template>
-          <ion-button expand="block" color="danger" fill="clear">Log Out</ion-button>
+          <ion-button expand="block" color="danger" fill="clear" (click)="logOut()">LogOut</ion-button>
         </ng-template>
       </ion-popover>
 
